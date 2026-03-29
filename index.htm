@@ -142,6 +142,30 @@
       z-index: 1;
     }
 
+    /* ── IMAGE MUSIQUE ── */
+    #h-musique {
+      position: relative;
+      overflow: hidden;
+    }
+    #h-fiction img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 70% 39%;
+      opacity: 1;
+      transition: opacity 0.3s;
+      z-index: 0;
+    }
+    #h-musique:has(.hero-title:hover) img {
+      opacity: 0.75;
+    }
+    #h-musique .hero-title {
+      position: relative;
+      z-index: 1;
+    }
+
     .hero-title { color: var(--gold); line-height: 1; }
 
     #h-fiction   .hero-title { font-family: 'RemingtonedType', serif; font-size: clamp(1.5rem, 4vw, 2.5rem); }
