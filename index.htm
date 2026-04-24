@@ -6,35 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Néréides Studio — Production cinématographique et audiovisuelle, Île-de-France." />
   <title>Audiovisuel et cinéma | Néréides Studio</title>
+  <link rel="stylesheet" href="styles/style.css">
   <style>
-
-    @font-face {
-      font-family: 'Centaur';
-      src: url('fonts/centaur.ttf') format('truetype');
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'RemingtonedType';
-      src: url('fonts/remington.ttf') format('truetype');
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'BalletHarmony';
-      src: url('fonts/balletharmony.ttf') format('truetype');
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'SegoeUI';
-      src: url('fonts/segoeui.ttf') format('truetype');
-      font-display: swap;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --gold: #ffd67d;
-      --navy: #1f2d3a;
-    }
 
     html, body {
       width: 100%;
@@ -50,22 +23,6 @@
       flex-direction: column;
       height: 100dvh;
       padding: 0 6vw;
-    }
-
-    /* ── HEADER ── */
-    .site-header {
-      flex-shrink: 0;
-      text-align: center;
-      padding-top: clamp(1rem, 4vh, 2.2rem);
-      padding-bottom: clamp(1rem, 4vh, 2.2rem);
-    }
-    .site-header h1 {
-      font-family: 'Centaur', serif;
-      font-size: clamp(1.3rem, 5vw, 2rem);
-      font-weight: 400;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
     }
 
     /* ── HEROES ── */
@@ -171,123 +128,6 @@
     #h-fiction   .hero-title { font-family: 'RemingtonedType', serif; font-size: clamp(1.5rem, 4vw, 2.5rem); }
     #h-fashion   .hero-title { font-family: 'BalletHarmony', serif;   font-size: clamp(1.8rem, 7.5vw, 3.4rem); }
     #h-musique   .hero-title { font-family: 'SegoeUI', sans-serif;    font-size: clamp(1.5rem, 5vw, 2.3rem); font-weight: 300; letter-spacing: 0.06em; }
-
-    /* ── À PROPOS ── */
-    .about {
-      flex-shrink: 0;
-      padding-bottom: clamp(0.5rem, 1.8vh, 1rem);
-    }
-    .about p {
-      font-family: 'Centaur', serif;
-      font-size: clamp(0.82rem, 3vw, 1rem);
-      line-height: 1.6;
-      color: var(--gold);
-      letter-spacing: 0.02em;
-    }
-
-    /* ── CTA ── */
-    .cta {
-      flex-shrink: 0;
-      display: flex;
-      justify-content: center;
-      padding-bottom: clamp(0.5rem, 1.8vh, 2rem);
-    }
-    .cta-btn {
-      font-family: 'Centaur', serif;
-      font-size: clamp(0.92rem, 3.4vw, 1.1rem);
-      letter-spacing: 0.08em;
-      color: var(--navy);
-      background: var(--gold);
-      border: none;
-      border-radius: 8px;
-      padding: 0.72em 2.2em;
-      cursor: pointer;
-      transition: background 0.25s, transform 0.2s;
-    }
-    .cta-btn:hover  { background: #e0b95a; transform: translateY(-2px); }
-    .cta-btn:active { transform: translateY(0); }
-
-    /* ── FOOTER ── */
-    .site-footer {
-      flex-shrink: 0;
-      text-align: center;
-      padding-bottom: clamp(0.6rem, 2.5vh, 1.2rem);
-    }
-    .site-footer p {
-      font-family: 'Centaur', serif;
-      font-size: clamp(0.6rem, 2.2vw, 0.78rem);
-      color: rgba(255, 214, 125, 0.4);
-      letter-spacing: 0.05em;
-    }
-
-    /* ── MODAL ── */
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-      background: rgba(15, 22, 30, 0.9);
-      backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s;
-    }
-    .modal-backdrop.visible {
-      opacity: 1;
-      pointer-events: all;
-    }
-    .business-card {
-      width: min(360px, 88vw);
-      background: #263546;
-      border: 1px solid rgba(255, 214, 125, 0.3);
-      border-radius: 16px;
-      padding: clamp(1.8rem, 6vw, 3rem);
-      text-align: center;
-      transform: translateY(20px) scale(0.97);
-      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    .modal-backdrop.visible .business-card { transform: translateY(0) scale(1); }
-
-    .card-name {
-      font-family: 'Centaur', serif;
-      font-size: 1.4rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-    .card-divider { width: 40px; height: 1px; background: rgba(255,214,125,0.3); margin: 1rem auto; }
-    .card-info    { display: flex; flex-direction: column; gap: 0.85rem; }
-    .card-line    { display: flex; align-items: center; justify-content: center; gap: 0.6rem; font-family: 'Centaur', serif; font-size: 1rem; color: rgba(255,214,125,0.8); }
-    .card-line a  { color: #fff; text-decoration: none; transition: color 0.2s; }
-    .card-line a:hover { color: var(--gold); }
-    .card-icon    { color: var(--gold); flex-shrink: 0; }
-
-    .modal-close {
-      margin-top: 2rem;
-      background: none;
-      border: 1px solid rgba(255,214,125,0.3);
-      border-radius: 8px;
-      color: rgba(255,214,125,0.6);
-      font-family: 'Centaur', serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      padding: 0.5rem 1.4rem;
-      cursor: pointer;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .modal-close:hover { border-color: var(--gold); color: var(--gold); }
-
-    /* Ombre marquée pour les mots "fictions", "fashion" et "musique" */
-    #h-fiction .hero-title,
-    #h-fashion .hero-title,
-    #h-musique .hero-title {
-      text-shadow:
-        2px 2px 4px rgba(0, 0, 0, 0.3),
-        -2px -2px 4px rgba(0, 0, 0, 0.3);
-    }
 
   </style>
 </head>
