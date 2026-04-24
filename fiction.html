@@ -50,6 +50,7 @@
       margin-bottom: 3rem;
       border-bottom: 1px solid rgba(255, 214, 125, 0.2);
       padding-bottom: 1rem;
+      box-shadow: none;
     }
 
     .site-header h1 {
@@ -59,8 +60,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       margin-bottom: 0.5rem;
-      color: var(--gold);
-    }
+      }
 
     .intro {
       flex-shrink: 0;
@@ -207,12 +207,25 @@
         grid-template-columns: 1fr;
       }
     }
+
+    .site-footer {
+      flex-shrink: 0;
+      text-align: center;
+      padding-bottom: clamp(0.6rem, 2.5vh, 1.2rem);
+    }
+    .site-footer p {
+      font-family: 'Centaur', serif;
+      font-size: clamp(0.6rem, 2.2vw, 0.78rem);
+      color: rgba(255, 214, 125, 0.4);
+      letter-spacing: 0.05em;
+    }
+    
   </style>
 </head>
 <body>
   <div class="page">
     <header class="site-header">
-      <a href="fiction" class="site-header"> <!---target="_blank" rel="noopener noreferrer"--->
+      <a href="index.htm" class="site-header"> <!---target="_blank" rel="noopener noreferrer"--->
       <h1>Néréides Studio</h1></a>
     </header>
 
@@ -357,7 +370,7 @@
             <h1 class="film-title">U Casteddu</h1>
             <p class="film-meta">Drame fantastique, 15min<br>Scénario : Anne-Sophie Soldaini & Thomas Chapelle<br>Réalisation : Anne-Sophie Soldaini</p>
             <p class="film-meta">Co-production avec Sisteria Films – Lou Camille</p>
-            <p class="awards">G.R.E.C. Porto Vecchio, novembre 2025</p>
+            <p class="awards">Ce scénario a été sélectionné pour suivre la résidence du G.R.E.C. Porto Vecchio, novembre 2025</p>
           </div>
         </div>
       </div>  
@@ -383,8 +396,8 @@
             <p class="film-meta">Co-production avec Denan Production – David Yol</p>
           </div>
         </div>
-
-        <!-- La fête des Pères -->
+        
+ <!-- La fête des Pères -->
         <div class="film-card">
           <div class="film-info" style="text-align: center; padding: 2rem;">
             <h1 class="film-title">La fête des Pères</h1>
@@ -393,8 +406,12 @@
         </div>
       </div>
     </section>
-
+    
     <a href="index.htm" class="back-link">Retour à l'accueil</a>
+
+    <footer class="site-footer">
+      <p>Copyright © 2026 Néréides Studio. RCA: 59.11C - siret : 927 856 923. Tous droits réservés.</p>
+    </footer>
   </div>
 </body>
 </html>
