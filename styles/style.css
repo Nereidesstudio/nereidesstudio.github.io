@@ -151,3 +151,12 @@
     }
     .modal-close:hover { border-color: var(--gold); color: var(--gold); }
 
+    @media (max-width: 768px) {
+      .page {
+        padding: 1rem;
+      }
+
+      .film-grid {
+        grid-template-columns: 1fr;
+      }
+    }
