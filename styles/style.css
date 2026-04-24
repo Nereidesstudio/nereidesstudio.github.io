@@ -6,17 +6,17 @@
     }
     @font-face {
       font-family: 'RemingtonedType';
-      src: url('fonts/remington.ttf') format('truetype');
+      src: url('../fonts/remington.ttf') format('truetype');
       font-display: swap;
     }
     @font-face {
       font-family: 'BalletHarmony';
-      src: url('fonts/balletharmony.ttf') format('truetype');
+      src: url('../fonts/balletharmony.ttf') format('truetype');
       font-display: swap;
     }
     @font-face {
       font-family: 'SegoeUI';
-      src: url('fonts/segoeui.ttf') format('truetype');
+      src: url('../fonts/segoeui.ttf') format('truetype');
       font-display: swap;
     }
 
