@@ -1,7 +1,7 @@
 /* --- polices personnalisées --- */
     @font-face {
       font-family: 'Centaur';
-      src: url('fonts/centaur.ttf') format('truetype');
+      src: url('../fonts/centaur.ttf') format('truetype');
       font-display: swap;
     }
     @font-face {
