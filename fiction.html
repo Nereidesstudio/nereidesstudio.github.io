@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Néréides Studio — Films et projets en production. Société de production cinématographique et audiovisuelle.">
+  <title>Fictions | Néréides Studio</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    /* Polices personnalisées */
+    @font-face {
+      font-family: 'Centaur';
+      src: url('polices/CENTAUR.TTF') format('truetype');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'RemingtonedType';
+      src: url('polices/REMINGTON.TTF') format('truetype');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'SegoeUI';
+      src: url('polices/SEGOEUI.TTF') format('truetype');
+      font-display: swap;
+    }
+
+    :root {
+      --gold: #ffd67d;
+      --navy: #1f2d3a;
+      --light-navy: #263546;
+    }
+
+    body {
+      font-family: 'SegoeUI', sans-serif;
+      background: var(--navy);
+      color: var(--gold);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .site-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 214, 125, 0.2);
+      padding-bottom: 1rem;
+    }
+
+    .site-header h1 {
+      font-family: 'Centaur', serif;
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .site-header .siret {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-bottom: 0.3rem;
+    }
+
+    .site-header .contact {
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-style: italic;
+    }
+
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    .section h2 {
+      font-family: 'Centaur', serif;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      text-align: center;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+    }
+
+    .film-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .film-card {
+      background: var(--light-navy);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .film-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .film-poster {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .film-info {
+      padding: 1.5rem;
+    }
+
+    .film-title {
+      font-family: 'RemingtonedType', serif;
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .film-meta {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .film-description {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .film-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .film-link {
+      display: block;
+      text-align: center;
+      color: var(--gold);
+      text-decoration: none;
+      background: rgba(255, 214, 125, 0.1);
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .film-link:hover {
+      background: rgba(255, 214, 125, 0.2);
+    }
+
+    .awards {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: rgba(255, 214, 125, 0.8);
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 3rem auto;
+      color: var(--gold);
+      text-decoration: none;
+      font-family: 'Centaur', serif;
+      font-size: 1.1rem;
+      padding: 0.7rem 2rem;
+      background: rgba(255, 214, 125, 0.1);
+      border-radius: 4px;
+      transition: background 0.3s;
+      width: fit-content;
+    }
+
+    .back-link:hover {
+      background: rgba(255, 214, 125, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .page {
+        padding: 1rem;
+      }
+
+      .film-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <h1>Néréides Studio</h1>
+      <!---p class="siret">N° SIRET : 927 856 948 000 17</p--->
+      <!---p class="contact">25 rue Lénine, 94200 Ivry-sur-Seine<br>nereides.studio@gmail.com – 06 78 37 23 20</p--->
+    </header>
+
+    <p class="intro">
+      Depuis 2024, Néréides Studio fait éclore des auteurs aux projets humanistes, engagés et positifs, à la croisée des genres.
+    </p>
+
+    <section class="section">
+      <h2>Films en distribution</h2>
+      <div class="film-grid">
+        <!-- Cassandre -->
+        <div class="film-card">
+          <img src="images/cassandre.jpg" alt="Affiche du film Cassandre" class="film-poster">
+          <div class="film-info">
+            <h3 class="film-title">Cassandre</h3>
+            <p class="film-meta">2026 – Drame fantastique, 20min<br>Réalisé par Hugues Willy Krebs</p>
+            <p class="film-meta">Visa : 162.981</p>
+            <div class="film-links">
+              <a href="https://vimeo.com/nereidesstudio/cassandre" class="film-link" target="_blank" rel="noopener noreferrer">Voir la bande-annonce</a>
+          </div>
+            <!---p class="film-meta">Mot de passe : cassandre2026</p--->
+          </div>
+        </div>
+
+        <!-- Les yeux roses -->
+        <div class="film-card">
+          <img src="images/yeux-roses.jpg" alt="Affiche du film Les yeux roses" class="film-poster">
+          <div class="film-info">
+            <h3 class="film-title">Les yeux roses</h3>
+            <p class="film-meta">2025 – Comédie musicale, 2min<br>Réalisé par Jordan Lambermont</p>
+            <p class="film-meta">Visa : en cours</p>
+            <div class="film-links">
+              <a href="https://vimeo.com/nereidesstudio/lesyeuxroses" class="film-link" target="_blank" rel="noopener noreferrer">Voir le film</a>
+            </div>
+            <!---p class="film-meta">Mot de passe : Amiens2026</p--->
+          </div>
+        </div>
+
+        <!-- Les dernières paroles du poète -->
+        <div class="film-card">
+          <img src="images/dernieres-paroles.jpg" alt="Affiche du film Les dernières paroles du poète" class="film-poster">
+          <div class="film-info">
+            <h3 class="film-title">Les dernières paroles du poète</h3>
+            <p class="film-meta">2025 – Animation, 8min<br>Réalisé par Mireille Boucard & Bruce Krebs</p>
+            <p class="film-meta">Visa : 165.518<br>Distribution : T4Culture</p>
+            <div class="film-links">
+              <a href="https://vimeo.com/nereidesstudio/dernieresparoles" class="film-link" target="_blank" rel="noopener noreferrer">Voir le film</a>
+            </div>
+            <!---p class="film-meta">Mot de passe : Daumal2025</p--->
+          </div>
+        </div>
+
+        <!-- Les Orchidoclastes -->
+        <div class="film-card">
+          <img src="images/orchidoclastes.jpg" alt="Affiche du film Les Orchidoclastes" class="film-poster">
+          <div class="film-info">
+            <h3 class="film-title">Les Orchidoclastes</h3>
+            <p class="film-meta">2025 – Comédie, 8min<br>Réalisé par Hugues Willy Krebs</p>
+            <p class="film-meta">Visa : 165.647<br>Distribution : T4Culture</p>
+            <div class="film-links">
+              <a href="https://vimeo.com/nereidesstudio/orchidoclastes" class="film-link" target="_blank" rel="noopener noreferrer">Voir le film</a>
+            </div>
+            <!---p class="film-meta">Mot de passe : papillon2025</p--->
+            <p class="awards">Prix du public, Festival des Canes, Pussay, octobre 2025</p>
+          </div>
+        </div>
+
+        <!-- À la folie, passionnément -->
+        <div class="film-card">
+          <img src="images/folie-passionnement.jpg" alt="Affiche du film À la folie, passionnément" class="film-poster">
+          <div class="film-info">
+            <h3 class="film-title">À la folie, passionnément</h3>
+            <p class="film-meta">2024 – Comédie, 4min<br>Réalisé par Tom Thomas Krebs</p>
+            <p class="film-meta">Visa : 163.309</p>
+            <div class="film-links">
+              <a href="https://vimeo.com/nereidesstudio/foliepassion" class="film-link" target="_blank" rel="noopener noreferrer">Voir le film</a>
+            </div>
+            <!---p class="film-meta">Mot de passe : folie2024</p--->
+          </div>
+        </div>
+
+        <!-- Les petites phrases -->
+        <div class="film-card">
+          <img src="images/petites-phrases.jpg" alt="Affiche du film Les petites phrases" class="film-poster">
+          <div class="film-info">
+            <h3 class="film-title">Les petites phrases</h3>
+            <p class="film-meta">2024 – Thriller fantastique, 11min<br>Réalisé par Hugues Willy Krebs</p>
+            <p class="film-meta">Visa : 163.239</p>
+            <div class="film-links">
+              <a href="https://vimeo.com/nereidesstudio/petitesphrases" class="film-link" target="_blank" rel="noopener noreferrer">Voir le film</a>
+            </div>
+            <!---p class="film-meta">Mot de passe : phrases2024</p--->
+            <p class="awards">
+              Delhi Shorts International Film Festival, Inde, 13ème édition, 2024.<br>
+              Omovies - International LGBT+ Questioning Film Festival, Naples, Italie, 2024
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Films en production</h2>
+      <div class="film-grid">
+        <!-- The Dispute -->
+        <div class="film-card">
+          <div class="film-info" style="text-align: center; padding: 2rem;">
+            <h3 class="film-title">The Dispute</h3>
+            <p class="film-meta">Science-fiction, 15min<br>Scénario et réalisation : Hugues Willy Krebs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Films en financements</h2>
+      <div class="film-grid">
+ <!-- Bleu Horizon -->
+        <div class="film-card">
+          <div class="film-info" style="text-align: center; padding: 2rem;">
+            <h3 class="film-title">Bleu Horizon</h3>
+            <p class="film-meta">Drame historique, 10min<br>Scénario et réalisation : Maximilien Diaz</p>
+          </div>
+        </div>
+ <!-- Saga -->
+        <div class="film-card">
+          <div class="film-info" style="text-align: center; padding: 2rem;">
+            <h3 class="film-title">Saga</h3>
+            <p class="film-meta">Drame fantastique, 20min<br>Scénario : Tom Thomas Krebs & Hugues Willy Krebs<br>Réalisation : Hugues Willy Krebs</p>
+          </div>
+        </div>
+      </div>
+      <div class="film-grid">
+        <!-- U Casteddu -->
+        <div class="film-card">
+          <div class="film-info" style="text-align: center; padding: 2rem;">
+            <h3 class="film-title">U Casteddu</h3>
+            <p class="film-meta">Drame fantastique, 15min<br>Scénario : Anne-Sophie Soldaini & Thomas Chapelle<br>Réalisation : Anne-Sophie Soldaini</p>
+            <p class="film-meta">Co-production avec Sisteria Films – Lou Camille</p>
+            <p class="awards">G.R.E.C. Porto Vecchio, novembre 2025</p>
+          </div>
+        </div>
+    </section>
+
+    <section class="section">
+      <h2>Projets en développement</h2>
+
+        <!-- Chantier familial -->
+        <div class="film-card">
+          <div class="film-info" style="text-align: center; padding: 2rem;">
+            <h3 class="film-title">Chantier familial</h3>
+            <p class="film-meta">Comédie dramatique, 15min<br>Scénario et réalisation : Justine Brousset</p>
+            <p class="film-meta">Co-production avec Parallell Cinema – David Steiner</p>
+          </div>
+        </div>
+
+        <!-- La dernière prise -->
+        <div class="film-card">
+          <div class="film-info" style="text-align: center; padding: 2rem;">
+            <h3 class="film-title">La dernière prise</h3>
+            <p class="film-meta">Drame, ~25min<br>Scénario et réalisation : Cedrick Spinassou</p>
+            <p class="film-meta">Co-production avec Denan Production – David Yol</p>
+          </div>
+        </div>
+
+        <!-- La fête des Pères -->
+        <div class="film-card">
+          <div class="film-info" style="text-align: center; padding: 2rem;">
+            <h3 class="film-title">La fête des Pères</h3>
+            <p class="film-meta">Drame, 20min<br>Scénario et réalisation : Yaël Yermia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="index.html" class="back-link">Retour à l'accueil</a>
+  </div>
+</body>
+</html>
