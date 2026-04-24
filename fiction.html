@@ -7,28 +7,6 @@
   <title>Fictions | Néréides Studio</title>
   <link rel="stylesheet" href="styles/style.css">
   <style>
-    /* polices personnalisées */
-    @font-face {
-      font-family: 'Centaur';
-      src: url('fonts/centaur.ttf') format('truetype');
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Remington';
-      src: url('fonts/remington.ttf') format('truetype');
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'SegoeUI';
-      src: url('fonts/segoeui.ttf') format('truetype');
-      font-display: swap;
-    }
-
-    :root {
-      --gold: #ffd67d;
-      --navy: #1f2d3a;
-      --light-navy: #263546;
-    }
 
     body {
       font-family: 'SegoeUI', sans-serif;
@@ -45,23 +23,6 @@
       padding: 2rem;
     }
     
-    .site-header {
-      text-decoration: none;
-      flex-shrink: 0;
-      text-align: center;
-      padding-top: clamp(1rem, 4vh, 2.2rem);
-      padding-bottom: clamp(1rem, 4vh, 2.2rem);
-    }
-    
-    .site-header h1 {
-      font-family: 'Centaur', serif;
-      font-size: clamp(1.3rem, 5vw, 2rem);
-      font-weight: 400;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
     .intro {
       flex-shrink: 0;
       text-align: center;
@@ -178,129 +139,7 @@
       text-align: center;
       margin-top: 0.5rem;
     }
-
-    .back-link {
-      display: block;
-      text-align: center;
-      margin: 3rem auto;
-      color: var(--gold);
-      text-decoration: none;
-      font-family: 'Centaur', serif;
-      font-size: 1.1rem;
-      padding: 0.7rem 2rem;
-      background: rgba(255, 214, 125, 0.1);
-      border-radius: 4px;
-      transition: background 0.3s;
-      width: fit-content;
-    }
-
-    .back-link:hover {
-      background: rgba(255, 214, 125, 0.2);
-    }
-
-    @media (max-width: 768px) {
-      .page {
-        padding: 1rem;
-      }
-
-      .film-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    .cta {
-      flex-shrink: 0;
-      display: flex;
-      justify-content: center;
-      padding-bottom: clamp(0.5rem, 1.8vh, 2rem);
-    }
-    .cta-btn {
-      font-family: 'Centaur', serif;
-      font-size: clamp(0.92rem, 3.4vw, 1.1rem);
-      letter-spacing: 0.08em;
-      color: var(--navy);
-      background: var(--gold);
-      border: none;
-      border-radius: 8px;
-      padding: 0.72em 2.2em;
-      cursor: pointer;
-      transition: background 0.25s, transform 0.2s;
-    }
-    .cta-btn:hover  { background: #e0b95a; transform: translateY(-2px); }
-    .cta-btn:active { transform: translateY(0); }
-    .site-footer {
-      flex-shrink: 0;
-      text-align: center;
-      padding-bottom: clamp(0.6rem, 2.5vh, 1.2rem);
-    }
-    
-    .site-footer p {
-      font-family: 'Centaur', serif;
-      font-size: clamp(0.6rem, 2.2vw, 0.78rem);
-      color: rgba(255, 214, 125, 0.4);
-      letter-spacing: 0.05em;
-    }
-
-        /* ── MODAL ── */
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-      background: rgba(15, 22, 30, 0.9);
-      backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s;
-    }
-    .modal-backdrop.visible {
-      opacity: 1;
-      pointer-events: all;
-    }
-    .business-card {
-      width: min(360px, 88vw);
-      background: #263546;
-      border: 1px solid rgba(255, 214, 125, 0.3);
-      border-radius: 16px;
-      padding: clamp(1.8rem, 6vw, 3rem);
-      text-align: center;
-      transform: translateY(20px) scale(0.97);
-      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    .modal-backdrop.visible .business-card { transform: translateY(0) scale(1); }
-
-    .card-name {
-      font-family: 'Centaur', serif;
-      font-size: 1.4rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-    .card-divider { width: 40px; height: 1px; background: rgba(255,214,125,0.3); margin: 1rem auto; }
-    .card-info    { display: flex; flex-direction: column; gap: 0.85rem; }
-    .card-line    { display: flex; align-items: center; justify-content: center; gap: 0.6rem; font-family: 'Centaur', serif; font-size: 1rem; color: rgba(255,214,125,0.8); }
-    .card-line a  { color: #fff; text-decoration: none; transition: color 0.2s; }
-    .card-line a:hover { color: var(--gold); }
-    .card-icon    { color: var(--gold); flex-shrink: 0; }
-
-    .modal-close {
-      margin-top: 2rem;
-      background: none;
-      border: 1px solid rgba(255,214,125,0.3);
-      border-radius: 8px;
-      color: rgba(255,214,125,0.6);
-      font-family: 'Centaur', serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      padding: 0.5rem 1.4rem;
-      cursor: pointer;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .modal-close:hover { border-color: var(--gold); color: var(--gold); }
-    
+   
   </style>
 </head>
 <body>
@@ -491,14 +330,13 @@
     <div class="cta">
       <button class="cta-btn" id="open-card">Entrons en contact</button>
     </div>
-        
-    <!---a href="index.htm" class="back-link">Retour à l'accueil</a--->
-    
+            
     <footer class="site-footer">
       <p>Copyright © 2026 Néréides Studio. RCA: 59.11C - siret : 927 856 923. Tous droits réservés.</p>
     </footer>
-  <!--/div-->
-    <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-label="Carte de visite Néréides Studio">
+
+    <!--- cta --->
+      <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-label="Carte de visite Néréides Studio">
       <div class="business-card">
         <p class="card-name">Néréides Studio</p>
       <div class="card-divider"></div>
