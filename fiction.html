@@ -72,11 +72,17 @@
       opacity: 0.7;
     }
 
+        /* ── À PROPOS ── */
     .intro {
-      text-align: center;
-      margin-bottom: 3rem;
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      font-style: italic;
+      flex-shrink: 0;
+      padding-bottom: clamp(0.5rem, 1.8vh, 1rem);
+    }
+    .intro p {
+      font-family: 'Centaur', serif;
+      font-size: clamp(0.82rem, 3vw, 1rem);
+      line-height: 1.6;
+      color: var(--gold);
+      letter-spacing: 0.02em;
     }
 
     .section {
@@ -125,7 +131,7 @@
 
     .film-title {
       font-family: 'RemingtonedType', serif;
-      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
       margin-bottom: 0.5rem;
       text-align: center;
     }
@@ -211,13 +217,13 @@
     </header>
 
     <p class="intro">
-      Depuis 2024, Néréides Studio fait éclore des auteurs aux projets humanistes, engagés et positifs, à la croisée des genres.
+      Depuis 2024, le catalogue de Néréides Studio se renforce avec des productions originales, humanistes, engagés et positives, à la croisée des genres.
     </p>
 
     <section class="section">
       <h2>Films en distribution</h2>
       <div class="film-grid">
-        <!-- Cassandre -->
+<!-- Cassandre -->
         <div class="film-card">
           <img src="images/cassandre.jpg" alt="Affiche du film Cassandre" class="film-poster">
           <div class="film-info">
@@ -225,13 +231,14 @@
             <p class="film-meta">2026 – Drame fantastique, 20min<br>Réalisé par Hugues Willy Krebs</p>
             <p class="film-meta">Visa : 162.981</p>
             <div class="film-links">
-              <a href="https://vimeo.com/nereidesstudio/cassandre" class="film-link" target="_blank" rel="noopener noreferrer">Voir la bande-annonce</a>
+              <a href="https://vimeo.com/nereidesstudio/cassandreteaser" class="film-link" target="_blank" rel="noopener noreferrer">Voir la bande-annonce</a>
+              <a href="https://vimeo.com/nereidesstudio/cassandre" class="film-link" target="_blank" rel="noopener noreferrer">Voir le film</a>
           </div>
             <!---p class="film-meta">Mot de passe : cassandre2026</p--->
           </div>
         </div>
 
-        <!-- Les yeux roses -->
+<!-- Les yeux roses -->
         <div class="film-card">
           <img src="images/yeux-roses.jpg" alt="Affiche du film Les yeux roses" class="film-poster">
           <div class="film-info">
@@ -245,7 +252,7 @@
           </div>
         </div>
 
-        <!-- Les dernières paroles du poète -->
+<!-- Les dernières paroles du poète -->
         <div class="film-card">
           <img src="images/dernieres-paroles.jpg" alt="Affiche du film Les dernières paroles du poète" class="film-poster">
           <div class="film-info">
@@ -253,13 +260,14 @@
             <p class="film-meta">2025 – Animation, 8min<br>Réalisé par Mireille Boucard & Bruce Krebs</p>
             <p class="film-meta">Visa : 165.518<br>Distribution : T4Culture</p>
             <div class="film-links">
+              <a href="https://vimeo.com/nereidesstudio/dernieresparolesteaser" class="film-link" target="_blank" rel="noopener noreferrer">Voir la bande annonce</a>
               <a href="https://vimeo.com/nereidesstudio/dernieresparoles" class="film-link" target="_blank" rel="noopener noreferrer">Voir le film</a>
             </div>
             <!---p class="film-meta">Mot de passe : Daumal2025</p--->
           </div>
         </div>
 
-        <!-- Les Orchidoclastes -->
+<!-- Les Orchidoclastes -->
         <div class="film-card">
           <img src="images/orchidoclastes.jpg" alt="Affiche du film Les Orchidoclastes" class="film-poster">
           <div class="film-info">
@@ -267,6 +275,7 @@
             <p class="film-meta">2025 – Comédie, 8min<br>Réalisé par Hugues Willy Krebs</p>
             <p class="film-meta">Visa : 165.647<br>Distribution : T4Culture</p>
             <div class="film-links">
+              <!---a href="https://vimeo.com/nereidesstudio/orchidoclastes" class="film-link" target="_blank" rel="noopener noreferrer">Voir la bande annonce</a--->
               <a href="https://vimeo.com/nereidesstudio/orchidoclastes" class="film-link" target="_blank" rel="noopener noreferrer">Voir le film</a>
             </div>
             <!---p class="film-meta">Mot de passe : papillon2025</p--->
@@ -274,7 +283,7 @@
           </div>
         </div>
 
-        <!-- À la folie, passionnément -->
+<!-- À la folie, passionnément -->
         <div class="film-card">
           <img src="images/folie-passionnement.jpg" alt="Affiche du film À la folie, passionnément" class="film-poster">
           <div class="film-info">
@@ -282,13 +291,14 @@
             <p class="film-meta">2024 – Comédie, 4min<br>Réalisé par Tom Thomas Krebs</p>
             <p class="film-meta">Visa : 163.309</p>
             <div class="film-links">
+              <!---a href="https://vimeo.com/nereidesstudio/foliepassion" class="film-link" target="_blank" rel="noopener noreferrer">Voir la bande annonce</a--->
               <a href="https://vimeo.com/nereidesstudio/foliepassion" class="film-link" target="_blank" rel="noopener noreferrer">Voir le film</a>
             </div>
             <!---p class="film-meta">Mot de passe : folie2024</p--->
           </div>
         </div>
 
-        <!-- Les petites phrases -->
+<!-- Les petites phrases -->
         <div class="film-card">
           <img src="images/petites-phrases.jpg" alt="Affiche du film Les petites phrases" class="film-poster">
           <div class="film-info">
@@ -296,6 +306,7 @@
             <p class="film-meta">2024 – Thriller fantastique, 11min<br>Réalisé par Hugues Willy Krebs</p>
             <p class="film-meta">Visa : 163.239</p>
             <div class="film-links">
+              <!---a href="https://vimeo.com/nereidesstudio/petitesphrases" class="film-link" target="_blank" rel="noopener noreferrer">Voir la bande annonce</a--->
               <a href="https://vimeo.com/nereidesstudio/petitesphrases" class="film-link" target="_blank" rel="noopener noreferrer">Voir le film</a>
             </div>
             <!---p class="film-meta">Mot de passe : phrases2024</p--->
@@ -338,9 +349,7 @@
             <p class="film-meta">Drame fantastique, 20min<br>Scénario : Tom Thomas Krebs & Hugues Willy Krebs<br>Réalisation : Hugues Willy Krebs</p>
           </div>
         </div>
-      </div>
-      <div class="film-grid">
-        <!-- U Casteddu -->
+<!-- U Casteddu -->
         <div class="film-card">
           <div class="film-info" style="text-align: center; padding: 2rem;">
             <h3 class="film-title">U Casteddu</h3>
@@ -349,12 +358,13 @@
             <p class="awards">G.R.E.C. Porto Vecchio, novembre 2025</p>
           </div>
         </div>
+      </div>  
     </section>
 
     <section class="section">
       <h2>Projets en développement</h2>
-
-        <!-- Chantier familial -->
+      <div class="film-grid">
+<!-- Chantier familial -->
         <div class="film-card">
           <div class="film-info" style="text-align: center; padding: 2rem;">
             <h3 class="film-title">Chantier familial</h3>
@@ -363,7 +373,7 @@
           </div>
         </div>
 
-        <!-- La dernière prise -->
+<!-- La dernière prise -->
         <div class="film-card">
           <div class="film-info" style="text-align: center; padding: 2rem;">
             <h3 class="film-title">La dernière prise</h3>
