@@ -44,7 +44,7 @@
     }
 
     body {
-      font-family: 'SegoeUI', sans-serif;
+      font-family: 'Centaur', serif;
       background: var(--navy);
       color: var(--gold);
       line-height: 1.6;
@@ -173,6 +173,47 @@
       color: rgba(255, 214, 125, 0.8);
       text-align: center;
       margin-top: 0.5rem;
+    }
+
+   .video-container {
+      width: 100%;
+      background: #000; /* Fond noir pour un rendu cinématographique */
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* Ratio 16:9 par défaut (ajuste si tes vidéos ont un autre ratio) */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-info {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .video-title {
+      font-family: 'RemingtonedType', serif;
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .video-meta {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 1rem;
     }
 
     /* ── À PROPOS ── */
