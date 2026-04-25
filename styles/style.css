@@ -86,14 +86,14 @@
       color: var(--gold);
     }
 
-    .film-grid {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem;
       margin-bottom: 2rem;
     }
 
-    .film-card {
+    .card {
       background: var(--light-navy);
       border-radius: 8px;
       overflow: hidden;
@@ -101,7 +101,7 @@
       transition: transform 0.3s, box-shadow 0.3s;
     }
     
-    .film-card h1 {
+    .card h1 {
       font-family: 'Remington';
       font-size: clamp(1.5rem, 3vw, 2rem);
       text-align: center;
@@ -111,41 +111,77 @@
       color: var(--gold);
     }
     
-    .film-card:hover {
+    .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     }
 
+/* affiche de film */
     .film-poster {
       width: 100%;
       aspect-ratio: 7/10;
       object-fit: cover;
     }
 
-    .film-info {
+/* lecteur vidéo */
+   .video-container {
+      width: 100%;
+      background: #000; /* Fond noir vidéo */
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* ration 16/9 */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+/* commentaires */
+    .info {
       padding: 1.5rem;
     }
 
-    .film-title {
+    .title {
       font-family: 'Remington', serif;
       font-size: clamp(1rem, 2vw, 2rem);
       margin-bottom: 0.5rem;
       text-align: center;
     }
 
-    .film-meta {
+    .meta {
       font-size: 0.9rem;
       opacity: 0.8;
       text-align: center;
       margin-bottom: 1rem;
     }
 
-    .film-description {
+    .description {
       font-size: 0.95rem;
       margin-bottom: 1rem;
       text-align: justify;
     }
 
+    .awards {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: rgba(255, 214, 125, 0.8);
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+/* liens vimeo */
     .film-links {
       display: flex;
       flex-direction: column;
@@ -165,55 +201,6 @@
 
     .film-link:hover {
       background: rgba(255, 214, 125, 0.2);
-    }
-
-    .awards {
-      font-size: 0.8rem;
-      font-style: italic;
-      color: rgba(255, 214, 125, 0.8);
-      text-align: center;
-      margin-top: 0.5rem;
-    }
-
-   .video-container {
-      width: 100%;
-      background: #000; /* Fond noir pour un rendu cinématographique */
-      border-radius: 8px;
-      overflow: hidden;
-      margin-bottom: 1rem;
-    }
-
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%; /* Ratio 16:9 par défaut (ajuste si tes vidéos ont un autre ratio) */
-      height: 0;
-      overflow: hidden;
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .video-info {
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .video-title {
-      font-family: 'RemingtonedType', serif;
-      font-size: clamp(1.2rem, 3vw, 1.5rem);
-      margin-bottom: 0.5rem;
-    }
-
-    .video-meta {
-      font-size: 0.9rem;
-      opacity: 0.8;
-      margin-bottom: 1rem;
     }
 
     /* ── À PROPOS ── */
