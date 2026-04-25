@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Néréides Studio — Films et projets en production. Société de production cinématographique et audiovisuelle.">
+  <title>Fictions | Néréides Studio</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a href="index.htm" class="site-header"> <!---target="_blank" rel="noopener noreferrer"--->
+      <h1>Néréides Studio</h1></a>
+    </header>
+
+    <p class="intro">
+      Depuis 2025, Néréides Studio travaille à mettre en valeur le travail de musiciens &<br>
+      musiciennes, danseurs & danseuses, à travers la création de clips musicaux.
+    </p>
+
+<section class="section">
+  <h2>Clips Musicaux</h2>
+  <div class="film-grid">
+<!-- trucutru -->
+    <div class="film-card">
+      <!---div class="video-container"-->
+        <!--div class="video-wrapper" style="padding-bottom: 56.25%;"> <!-- Ratio 16:9 -->
+          <iframe
+            src="https://www.youtube.com/embed/E9OB-VmUAq0?rel=0&modestbranding=1&controls=1&autoplay=0&mute=0&loop=0&playlist="
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        <!---/div--->
+      <!---/div--->
+          <div class="film-info">
+            <h1 class="film-title">Trucutru</h1>
+            <p class="film-meta">2025 – La Buena Noticia, 5min 11sec<br>Réalisé par Hugues Willy Krebs</p>
+            <div class="film-links">
+              <a href="https://vimeo.com/nereidesstudio/cassandre" class="film-link" target="_blank" rel="noopener noreferrer">Voir le clip</a>
+            </div>
+          </div>
+        </div>
+
+<!-- Por si acaso - Buena Noticia -->
+        <div class="film-card">
+          <img src="images/yeux-roses.jpg" alt="Affiche du film Les yeux roses" class="film-poster">
+          <div class="film-info">
+            <h1 class="film-title">Por si acaso</h1>
+            <p class="film-meta">2025 – La Buena Noticia, 6min 30sec<br>Réalisé par Hugues Willy Krebs</p>
+            <div class="film-links">
+              <a href="https://vimeo.com/nereidesstudio/lesyeuxroses" class="film-link" target="_blank" rel="noopener noreferrer">Voir le clip/a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="section">
+      <h1>Danse</h1>
+      <div class="film-grid">
+<!-- Rough love -->
+        <div class="film-card">
+          <div class="film-info" style="text-align: center; padding: 2rem;">
+            <h1 class="film-title">Rough Love</h1>
+            <p class="film-meta">2024, 2min 40sec<br>Réalisé par Hugues Willy Krebs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta">
+      <button class="cta-btn" id="open-card">Entrons en contact</button>
+    </div>
+            
+    <footer class="site-footer">
+      <p>Copyright © 2026 Néréides Studio. RCA: 59.11C - siret : 927 856 923. Tous droits réservés.</p>
+    </footer>
+
+    <!--- cta --->
+      <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-label="Carte de visite Néréides Studio">
+      <div class="business-card">
+        <p class="card-name">Néréides Studio</p>
+      <div class="card-divider"></div>
+  <div class="card-info">
+      <div class="card-line">
+          <svg class="card-icon" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.09a.5.5 0 0 1 .47.33l.9 2.5a.5.5 0 0 1-.11.52L4.5 6.7C5.3 8.4 7.6 10.7 9.3 11.5l1.35-1.35a.5.5 0 0 1 .52-.11l2.5.9a.5.5 0 0 1 .33.47V12.5A1.5 1.5 0 0 1 12.5 14C6.7 14 2 9.3 2 3.5Z"/>
+          </svg>
+          <a href="tel:0678372320">06 78 37 23 20</a>
+        </div>
+        <div class="card-line">
+          <svg class="card-icon" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="1" y="3" width="14" height="10" rx="1.5"/>
+            <path d="m1 4 7 5 7-5"/>
+          </svg>
+          <a href="mailto:nereides.studio@gmail.com">nereides.studio@gmail.com</a>
+        </div>
+      </div>
+      <button class="modal-close" id="close-card">Fermer</button>
+    </div>
+  </div>
+
+  <!-- Script Cloudflare pour décoder l'email -->
+  <!--script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script--->
+
+  <!-- Script pour gérer la modale -->
+  <script>
+    const modal    = document.getElementById('modal');
+    const openBtn  = document.getElementById('open-card');
+    const closeBtn = document.getElementById('close-card');
+
+    openBtn.addEventListener('click', () => modal.classList.add('visible'));
+    closeBtn.addEventListener('click', () => modal.classList.remove('visible'));
+  </script>
+
+</body>
+</html>
