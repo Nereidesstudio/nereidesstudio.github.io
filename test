@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Néréides Studio – Production cinématographique et audiovisuelle en Île-de-France. Découvrez nos projets : fictions, fashion, spectacle vivant.">
+  <meta name="keywords" content="Néréides Studio, cinéma, audiovisuel, production, fiction, fashion, spectacle vivant, Île-de-France, Tom Thomas Krebs, Hugues Willy Krebs">
+  <meta name="author" content="Néréides Studio">
+  <link rel="canonical" href="https://nereidesstudio.fr/" />
+  <meta property="og:title" content="Néréides Studio – Production cinématographique et audiovisuelle">
+  <meta property="og:description" content="Découvrez nos projets : fictions, fashion, spectacle vivant.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nereidesstudio.fr/">
+  <meta property="og:image" content="https://nereidesstudio.fr/images/aperçu-nereides-studio.jpg">
+  <title>Néréides Studio – Production cinématographique et audiovisuelle</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <h1>Néréides Studio</h1>
+      <p class="siret">N° SIRET : 927 856 948 000 17</p>
+    </header>
+
+    <section class="hero">
+      <h2>Bienvenue chez Néréides Studio</h2>
+      <p>
+        Fondé par Tom Thomas Krebs et Hugues Willy Krebs, Néréides Studio est un studio de production cinématographique et audiovisuelle basé en Île-de-France.
+      </p>
+      <p>
+        Nous accompagnons des projets <strong>humanistes, engagés et positifs</strong>, à la croisée des genres : fictions, créations mode, et spectacles vivants.
+      </p>
+    </section>
+
+    <nav class="main-nav">
+      <h2>Nos univers</h2>
+      <div class="nav-links">
+        <a href="fiction.html" class="nav-link">Fictions</a>
+        <a href="fashion.html" class="nav-link">Fashion</a>
+        <a href="clips-musique.html" class="nav-link">Spectacle vivant</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
+
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+      <p>
+        25 rue Lénine, 94200 Ivry-sur-Seine<br>
+        <a href="mailto:nereides.studio@gmail.com">nereides.studio@gmail.com</a> – <a href="tel:0678372320">06 78 37 23 20</a>
+      </p>
+    </section>
+
+    <footer class="site-footer">
+      <p>Copyright © 2026 Néréides Studio. Tous droits réservés.</p>
+    </footer>
+  </div>
+</body>
+</html>
